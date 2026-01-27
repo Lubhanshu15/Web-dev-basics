@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Ranking App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 50%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .form-section { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Chess Ranking App</h1>
+
+    <!-- Add Player Form -->
+    <div class="form-section">
+        <h2>Add Player</h2>
+        <input type="text" id="playerName" placeholder="Player Name">
+        <input type="number" id="initialRating" placeholder="Initial Rating (e.g., 1500)" value="1500">
+        <button onclick="addPlayer()">Add Player</button>
+    </div>
+
+    <!-- Record Match Form -->
+    <div class="form-section">
+        <h2>Record Match</h2>
+        <select id="player1"></select>
+        <select id="player2"></select>
+        <select id="result">
+            <option value="1">Player 1 Wins</option>
+            <option value="0.5">Draw</option>
+            <option value="0">Player 2 Wins</option>
+        </select>
+        <button onclick="recordMatch()">Submit Match</button>
+    </div>
+
+    <!-- Rankings Table -->
+    <h2>Rankings</h2>
+    <table id="rankingsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody id="rankingsBody"></tbody>
+    </table>
+
+    <script>
+        // Player data storage
+        let players = [];
+
+        // Add a new player
+        function addPlayer() {
+            const name = document.getElementById('playerName').value.trim();
+            const rating = parseInt(document.getElementById('initialRating').value);
+            if (name && !isNaN(rating)) {
+                players.push({ name, rating });
+                updateDropdowns();
+                updateRankings();
+                document.getElementById('playerName').value = '';
+            } else {
+                alert('Please enter a valid name and rating.');
+            }
+        }
+
+        // Update player dropdowns
+        function updateDropdowns() {
+            const player1Select = document.getElementById('player1');
+            const player2Select = document.getElementById('player2');
+            player1Select.innerHTML = '';
+            player2Select.innerHTML = '';
+            players.forEach(player => {
+                const option1 = document.createElement('option');
+                const option2 = document.createElement('option');
+                option1.text = player.name;
+                option2.text = player.name;
+                player1Select.add(option1);
+                player2Select.add(option2);
+            });
+        }
+
+        // Calculate expected score
+        function expectedScore(ratingA, ratingB) {
+            return 1 / (1 + Math.pow(10, (ratingB - ratingA) / 400));
+        }
+
+        // Record match and update ratings
+        function recordMatch() {
+            const player1Name = document.getElementById('player1').value;
+            const player2Name = document.getElementById('player2').value;
+            const result = parseFloat(document.getElementById('result').value);
+
+            if (player1Name === player2Name) {
+                alert('Players must be different!');
+                return;
+            }
+
+            const player1 = players.find(p => p.name === player1Name);
+            const player2 = players.find(p => p.name === player2Name);
+
+            const K = 32; // Elo constant
+            const expected1 = expectedScore(player1.rating, player2.rating);
+            const expected2 = expectedScore(player2.rating, player1.rating);
+
+            player1.rating += Math.round(K * (result - expected1));
+            player2.rating += Math.round(K * ((1 - result) - expected2));
+
+            updateRankings();
+        }
+
+        // Update rankings table
+        function updateRankings() {
+            const tbody = document.getElementById('rankingsBody');
+            tbody.innerHTML = '';
+            players.sort((a, b) => b.rating - a.rating); // Sort by rating descending
+            players.forEach(player => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${player.name}</td><td>${player.rating}</td>`;
+                tbody.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>
