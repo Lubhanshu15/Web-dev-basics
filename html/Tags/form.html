@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form action="/action.php">
+            <h4>Name</h4>
+            <input type="text" placeholder="Enter your name">
+            <br>
+            <h4>Password</h4>
+            <input type="password" placeholder="Enter your password">
+            <br>
+            <h4>Are you Human or not</h4>
+            <input type="radio" value ="Are you Human" name="Verification" id="id1">Are you human
+            
+            <label for="id2">
+                <input type="radio" value ="Are you Robot" name="Verification" id="id2">Are you Robot
+            </label>
+            <br>
+            
+            <h4>Select your favorite subjects</h4>
+            <label for="id3">
+                <input type="checkbox" value="Maths" name="subject" id="id3">Maths
+            </label>
+            <label for="id4">
+                <input type="checkbox" value="Physics" name="subject" id="id4">Physics
+            </label>
+            <label for="id5">
+                <input type="checkbox" value="Chemistry" name="subject" id="id5">Chemistry
+            </label>
+            <br>
+            
+            <h4>Select your city</h4>
+            <select name="city" id="city">
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Banglore">Banglore</option>
+                <option value="Bhopal">Bhopal</option>
+            </select>
+            <br>
+            <h4>Please leave feedback here</h4>
+            <textarea name="feedback" id="id6" placeholder="Feedback here"></textarea> 
+            <br>
+            <br>
+            <input type="submit" value="submit">
+        </form>
+    </main>
+</body>
+</html>
