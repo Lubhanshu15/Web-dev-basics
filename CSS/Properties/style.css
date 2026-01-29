@@ -1,0 +1,13 @@
+/* We are learning about some color properties.
+   1. what if we have to change the whole background color of the page.
+ */
+
+ body{
+    background-color: rgba(111, 167, 231, 0.76);
+ }
+ /* this is used for changing color of an specific element.*/
+ h1{
+    color: red;
+    background-color: black; /*used to change the bg color of this element*/
+    
+ }
