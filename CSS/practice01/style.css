@@ -1,0 +1,19 @@
+#box{
+    background-color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+    
+}
+body{
+    background-color: black;
+}
+
+.heading{
+    color: red;
+}
+
+button{
+    color: green;
+    
+}

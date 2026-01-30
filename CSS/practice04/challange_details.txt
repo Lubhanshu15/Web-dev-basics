@@ -1,0 +1,6 @@
+1. Create a webpage layout with a header, a footer and a content area containing 3 divs. Set the height and width of divs to 100px.
+(add the challange 2 navbar in the header)
+
+2. Add borders to all the divs.
+3. Add a different background color to each div with an opacity of 0.5.
+4. Give the content area  an appropriate hegiht.

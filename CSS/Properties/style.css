@@ -1,6 +1,9 @@
 /* We are learning about some color properties.
    1. what if we have to change the whole background color of the page.
  */
+ *{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
 
  body{
     background-color: rgba(111, 167, 231, 0.76);
@@ -9,5 +12,51 @@
  h1{
     color: red;
     background-color: black; /*used to change the bg color of this element*/
+    
+ }
+
+ #subtitle{ /* this is the id method*/
+    color: #0f0096;
+ }
+ 
+ button{ /* for button */
+    color: black;
+    background-color: rgb(137, 137, 245);
+    border: 2;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    border-bottom: 2;
+    border-top: 2;
+    border-color: black;
+    border-style: solid;
+ }
+
+ .secret{ /*this is the class method*/
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24pt;
+    text-decoration:#960000 dashed line-through;
+    background-color: #960000;
+ }
+
+ p{/*because text is by default left aligned so we can modify it and some text properties*/
+    text-align: center;
+    color: #960000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    font-weight: lighter;
+    text-decoration: blue underline;
+
+ }
+
+ div{ /*height and other box model in css properties and their usage*/
+    height: 25px;
+    width: 200px;
+    background-color: rgb(180, 11, 11);
+    text-align: center;
+    border-width: 2px;
+    border-color: black;
+    border-style: dashed;
+    border-radius: 25px;
+    padding-top: 1px;
     
  }

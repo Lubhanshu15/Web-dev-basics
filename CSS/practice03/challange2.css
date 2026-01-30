@@ -1,0 +1,43 @@
+body{
+    background-color: white;
+    height: 60px;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+#one{
+    color: rgb(207, 121, 8);
+    text-align: start;
+    margin-left: 30px;
+    
+}
+#two{
+    color: white;
+    margin-left: 200px;
+}
+#three{
+    color: white;
+    margin-left: 200px;
+}
+#four{
+    margin-left: 200px;
+}
+#five{
+    background-color: rgb(207, 121, 8);
+}
+#zero{
+    background-color: #001111;
+
+    height: 50px;
+    text-align:inherit;
+    padding-top: 10px;
+
+}
+#minus{
+    color: white;
+    margin-left: 200px;
+
+}
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

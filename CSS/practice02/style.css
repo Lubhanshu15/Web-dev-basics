@@ -1,0 +1,27 @@
+#headline{
+    color: #960000;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 95px;
+    font-style: italic;
+}
+
+body{
+    background-color: #000000
+}
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#inner{
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    
+}
+
+#outer{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
