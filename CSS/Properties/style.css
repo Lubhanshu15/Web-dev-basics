@@ -51,12 +51,14 @@
  div{ /*height and other box model in css properties and their usage*/
     height: 25px;
     width: 200px;
-    background-color: rgb(180, 11, 11);
+    background-color: rgba(180, 11, 11,0.75); /* rgba a represents alpha which is responsible for controling the opacity*/
     text-align: center;
     border-width: 2px;
     border-color: black;
     border-style: dashed;
     border-radius: 25px;
     padding-top: 1px;
+    display: inline-block;
+    
     
  }
