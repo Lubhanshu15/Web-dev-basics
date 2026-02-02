@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(63, 61, 61);
+    
+}
+div{
+    border: 0px;
+    border-color: rgba(255, 254, 254, 0.3);
+    border-style: solid;
+    border-radius: 25px;
+}
+#navbar{
+    background-color: rgba(255, 254, 254, 0.3);
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+a{
+    color: rgba(255, 244, 244, 0.75);
+}
+li{
+    list-style-type: none;
+    display: inline;
+}

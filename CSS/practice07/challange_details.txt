@@ -1,0 +1,5 @@
+Add a media query to implement the following - 
+    the color of a div changes to green for viewport width less than 300px
+    the color of a div changes to pink for viewport width between 300px and 400px
+    the color of a div changes to red for viewport width between 400px and 600px
+    the color of a div changes to blue for viewport width above 600px 

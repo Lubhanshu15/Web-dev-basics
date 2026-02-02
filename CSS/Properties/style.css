@@ -59,10 +59,21 @@
     border-radius: 25px;
     padding-top: 1px;
     display: inline-block;
-    
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in(5ms);
+    transition-delay: 0.2ms;
     
  }
-
+ #div:hover{
+    background-color: antiquewhite;
+    color: blue;
+    transform: scale(2);
+    rotate: 45deg;
+    transform: translate(200px);
+    transform: skew(90deg);
+ }
+ 
  #container{
     margin-top: 10px;
     height: 200px;
@@ -133,4 +144,35 @@
     text-align: center;
     border-style: solid;
     margin-left: 0.5px;
+ }
+
+ @media (min-width:600px){
+    body{
+        background-color: black;
+    }
+ }
+
+
+
+ #pookie{
+    height: 100px;
+    width: 200px;
+    background-color: #0f0096;
+    text-align: center;
+    color: white;
+    
+ }
+
+  @keyframes firstanimation {
+    from{background-color: #960000;}
+    to{background-color: aliceblue;}
+ }
+
+ #pookie:hover{
+    animation-name: firstanimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-delay: 5ms;
+    animation-iteration-count: infinite;
+
  }
