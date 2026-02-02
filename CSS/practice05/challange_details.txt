@@ -1,0 +1,8 @@
+Create the following layout using Html
+     Give the div a height width and some background image.
+
+     use the appropriate prosition property for the div element to place it at he right end of the page. (The div should not move even on the scroll)
+
+     <p>lorem*5</p>
+     <div>Love Nature</div>
+     <p> lorem*5</p>
