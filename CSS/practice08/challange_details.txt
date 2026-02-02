@@ -1,0 +1,4 @@
+Create a simple loder using css
+    step 1 : create a div with circular shape & a thik border from one end (top/bottom/right/left)
+    step 2 : To make it spin create an animation which transforms it from 0deg to 360deg
+    step 3 : Add the animation property to the loader with infinite duration

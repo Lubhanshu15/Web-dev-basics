@@ -1,0 +1,19 @@
+div{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 10px solid rgb(123, 123, 126);
+    border-top: 10px solid black;
+    animation-name: animation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    margin-left: 47%;
+    margin-top: 230px;
+}
+@keyframes animation {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+    
+}
+
