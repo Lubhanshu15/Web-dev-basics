@@ -1,10 +1,11 @@
 // write a program using each type of the datatype in the js 
+// these are the primitive datatypes of javascript
 let age = 18; // number and bigint 
 let na = 'Lubhanshu' // string 
 let cha = 'a' // char
 let flo = 45.9; // float 
 let bool = true; //boolean
-let passion; //undefined
+let passion; //undefined 
 let nu = null; //null
 let chij = Symbol('Lubhanshu'); //symbol
 

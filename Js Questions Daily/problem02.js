@@ -7,7 +7,7 @@ console.log(age); // let is Block-scoped variable means between the brackets
 {
     let b = "lubhanshu";
     console.log(b)
-}
+} //this used to make a block {}
 //console.log(b)
 
   
